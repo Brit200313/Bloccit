@@ -1,12 +1,12 @@
 class FavoritesController < ApplicationController
-
-def create
+  def create
     @topic = Topic.find(params[:topic_id])
     @post = @topic.posts.find(params[:post_id])
 
-    favorite = current_user.favorites.create(post: @post)
-    # for the create action
     authorize! :create, Favorite, message: "You cannot do that"
+
+    favorite = current_user.favorites.create(post: @post)
+    
     if favorite.valid?
       flash[:notice] = "Favorited post"
       redirect_to [@topic, @post]
@@ -15,21 +15,20 @@ def create
       redirect_to [@topic, @post]
     end
   end
-end
 
-def destroy
-  @topic = Topic.find(params[:topic_id])
-  @post = @topic.posts.find(params[:post_id])
-  @favorite = current_user.favorites.find(params[:id])
+  def destroy
+    @topic = Topic.find(params[:topic_id])
+    @post = @topic.posts.find(params[:post_id])
+    @favorite = current_user.favorites.find(params[:id])
 
-  # for the destroy action
-  authorize! :destroy, @favorite, message: "You cannot do that."
+    authorize! :destroy, @favorite, message: "You cannot do that."
 
-  if @favorite.destroy
-    flash[:notice] = "Removed favorite."
-    redirect_to [@topic, @post]
-  else
-    flash[:error] = "Unable to remove favorite. Please try again."
-    redirect_to [@topic, @post]
+    if @favorite.destroy
+      flash[:notice] = "Removed favorite."
+      redirect_to [@topic, @post]
+    else
+      flash[:error] = "Unable to remove favorite. Please try again."
+      redirect_to [@topic, @post]
+    end
   end
 end
