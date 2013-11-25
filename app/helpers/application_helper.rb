@@ -24,4 +24,10 @@ def will_paginate(collection_or_options = nil, options = {})
     super *[collection_or_options, options].compact
 end
 
+def comment_url_helper(comment)
+  post = comment.post
+  topic = post.topic
+  [topic, post, comment]
+end
+
 end
