@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.13'
 
 group :production do
@@ -8,10 +10,6 @@ end
 
 group :development do
   gem 'sqlite3'
-end
-
-group :development, :test do
-  gem 'rspec-rails'
 end
 
 group :assets do
