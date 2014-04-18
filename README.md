@@ -1,6 +1,6 @@
 # Bloccit
 
-A Reddit-style application to demonstrate foundation programming and web development skills.
+A Reddit-style application to demonstrate foundation programming and web development skills using Ruby on Rails. 
 
 Made with my mentor, Aaron, at Bloc (http://bloc.io)
 
