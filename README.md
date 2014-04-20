@@ -10,6 +10,6 @@ Restyled with the Bootswatch Amelia theme for Bootstrap.
 
 Copy the "config/application.example.yml" file and remove "example". Your application.yml should contain your sensitive credentials. It should be included in .gitnore as well.
 
-## How to Code
+## Learning to Code
 
-If you are in becoming a rail developer, I highly suggest visiting www.bloc.io 
+If you are in becoming a rails developer, I highly suggest visiting www.bloc.io. You can also check out of my review of Bloc here: http://sfviapgh.com/blog/2014/1/16/h8nr4qwzz2m2zaca5utjpb5qu7h345
