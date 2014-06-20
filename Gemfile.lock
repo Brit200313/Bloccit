@@ -103,7 +103,13 @@ GEM
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
+    netrc (0.7.7)
     newrelic_rpm (3.6.9.171)
+    ninefold (1.4.1)
+      faraday
+      json
+      netrc
+      thor
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     oauth2 (0.8.1)
@@ -205,6 +211,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   newrelic_rpm
+  ninefold
   omniauth-facebook
   pg
   rails (= 3.2.13)
