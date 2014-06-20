@@ -12,4 +12,4 @@ Copy the "config/application.example.yml" file and remove "example". Your applic
 
 ## Tested with Magnum CI 
 
-Magnum PI would be proud! 
+Magnum PI would be proud with how these tests are passing!
