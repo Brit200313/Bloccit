@@ -5,11 +5,8 @@ ruby '2.0.0'
 gem 'rails', '3.2.13'
 
 group :production do
-  gem 'puma'
-end
-
-group :production do
   gem 'pg'
+  gem 'puma'
 end
 
 group :development do
