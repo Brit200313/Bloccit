@@ -4,7 +4,9 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 
-# gem 'unicorn'
+group :production do
+  gem 'puma'
+end
 
 group :production do
   gem 'pg'
